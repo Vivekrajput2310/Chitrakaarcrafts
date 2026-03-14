@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChitraKaar Crafts – Handmade Gifts</title>
+<meta name="description" content="Discover amazing products at unbeatable prices.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<!-- NAVBAR -->
+<nav>
+  <span class="logo" onclick="goPage('home')">Chitrakaar<em>Crafts</em></span>
+  <ul class="nav-links" id="navLinks">
+    <li><a id="nl-home"    onclick="navGo('home')">Home</a></li>
+    <li><a id="nl-about"   onclick="navGo('about')">About</a></li>
+    <li><a id="nl-cart"    onclick="navGo('cart')" style="position:relative">
+      Cart <span class="cbadge" id="cbadge">0</span>
+    </a></li>
+    <li><a id="nl-contact" onclick="navGo('contact')">Contact Us</a></li>
+    <li id="authLi"><a onclick="openAuth()">Login</a></li>
+    <li id="userLi" style="display:none"><a id="userLink" onclick="navGo('dashboard')">Account</a></li>
+    <li id="logoutLi" style="display:none"><a onclick="doLogout()">Logout</a></li>
+  </ul>
+  <button class="burger" id="burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HOME ══ -->
+<div id="pg-home" class="pg on">
+  <section class="hero">
+    <div class="hbg"></div><div class="hgrid"></div>
+    <div class="hcont">
+      <div class="hbadge">✦ Handmade With Love</div>
+      <h1>Gifts Made with <em>Love</em><br>& Care 💝</h1>
+      <p>Bouquets, Hampers, Cards, Frames & more — every gift handcrafted with love. Based in Indore, delivering joy across India.</p>
+      <div class="hbtns">
+        <button class="bgold" onclick="document.getElementById('prodsec').scrollIntoView({behavior:'smooth'})">🛍 Shop Now</button>
+        <button class="bghost" onclick="goPage('about')">Our Story →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="prodsec">
+    <div class="sechd"><h2>Our <span class="gold">Creations</span></h2><p>Handcrafted gifts for every special occasion</p></div>
+    <div class="pgrid" id="prodGrid"></div>
+  </section>
+
+  <section class="sec" style="background:var(--cream);padding-top:52px;padding-bottom:52px">
+    <div class="sechd"><h2>Why <span class="gold">ChitraKaar Crafts?</span></h2></div>
+    <div class="feat-grid" style="padding:0">
+      <div class="fcard"><div class="ico">🚀</div><h3>Fast Delivery</h3><p>2–4 business days anywhere in India.</p></div>
+      <div class="fcard"><div class="ico">🔒</div><h3>Secure Payments</h3><p>Encrypted & safe checkout every time.</p></div>
+      
+    </div>
+  </section>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<div id="pg-about" class="pg">
+  <div class="about-hero">
+    <h1>About <em>ChitraKaar Crafts</em></h1>
+    <p>Handmade gifts crafted with love — bouquets, hampers, cards, frames & more for every special occasion.</p>
+  </div>
+
+  <div class="story-grid">
+    <div class="story-text">
+      <h2>Our <span class="gold">Story</span></h2>
+      <p>ChitraKaar Crafts was born from one simple belief — every gift should feel personal, handmade, and full of love.</p>
+      <p>Based in Indore, we pour our heart into every bouquet, hamper, card, frame and explosion box we create. Each product is made by hand, just for you.</p>
+      <p>Whether it's a birthday, anniversary, or just a reason to smile — we make sure your gift is unforgettable.</p>
+    </div>
+    <div class="story-img">🛍️</div>
+  </div>
+  <div class="feat-grid">
+    <div class="fcard"><div class="ico">🎨</div><h3>100% Handmade</h3><p>Every product is crafted by hand with love, care and attention to detail.</p></div>
+    <div class="fcard"><div class="ico">🎁</div><h3>Custom Gifting</h3><p>Personalized bouquets, hampers, cards and frames for every occasion.</p></div>
+    <div class="fcard"><div class="ico">📍</div><h3>Based in Indore</h3><p>Proudly made in Indore, MP — delivering happiness across India.</p></div>
+    <div class="fcard"><div class="ico">💝</div><h3>Made with Love</h3><p>Each piece carries a personal touch that makes your gift truly special.</p></div>
+  </div>
+
+  <div style="text-align:center;padding:40px 5% 60px">
+    <button class="bgold" onclick="goPage('home');setTimeout(()=>document.getElementById('prodsec').scrollIntoView({behavior:'smooth'}),80)">🛍 Start Shopping</button>
+  </div>
+</div>
+
+<!-- ══ CONTACT ══ -->
+<div id="pg-contact" class="pg">
+  <div class="contact-hero">
+    <h1>Contact <span style="color:var(--gold)">Us</span></h1>
+    <p>We're here to help — reach out and we'll respond within 24 hours.</p>
+  </div>
+  <div class="cbody">
+    <div>
+      <div class="cinfobox">
+        <h3>Get In Touch</h3>
+        <div class="cirow"><div class="cii">📧</div><div class="cit"><strong>Email Us</strong><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="483b383d3a7c79797c082f25292124662b2725">[email&#160;protected]</a></span></div></div>
+        <div class="cirow"><div class="cii">⏰</div><div class="cit"><strong>Support Hours</strong><span>Mon–Sat, 9 AM – 6 PM IST</span></div></div>
+        <div class="cirow"><div class="cii">📍</div><div class="cit"><strong>Headquarters</strong><span>India 🇮🇳</span></div></div>
+        <div class="cirow"><div class="cii">💬</div><div class="cit"><strong>WhatsApp</strong><span>Available on request</span></div></div>
+        <div style="margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)">
+          <p style="font-size:.78rem;color:rgba(255,255,255,.35);margin-bottom:6px">RESPONSE TIME</p>
+          <p style="color:var(--gold);font-weight:700">Usually within 2 hours ⚡</p>
+        </div>
+      </div>
+      <div style="background:var(--cream);border-radius:var(--r);padding:20px;margin-top:20px;border:1px solid var(--gl)">
+        <h4 style="font-weight:700;margin-bottom:8px">📦 Order Issues?</h4>
+        <p style="font-size:.84rem;color:var(--gray);line-height:1.6">For order issues, mention your Order ID in the message. Find it in <strong>My Account → Orders</strong>.</p>
+      </div>
+    </div>
+
+  </div>
+  <div style="padding:0 5% 60px">
+    <div style="background:var(--cream);border-radius:var(--r);display:flex;align-items:center;justify-content:center;min-height:160px;border:1px solid var(--gl);text-align:center;padding:40px">
+      <div><div style="font-size:2.2rem;margin-bottom:10px">📍</div><strong>ChitraKaar Crafts</strong><br><span style="color:var(--gray);font-size:.88rem">Indore, MP — Delivering handmade love across India</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CART ══ -->
+<div id="pg-cart" class="pg" style="padding:52px 5%;min-height:70vh">
+  <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;margin-bottom:6px">Your Cart 🛒</div>
+  <p style="color:var(--gray)" id="cartSub">0 items</p>
+  <div id="cartContent"></div>
+</div>
+
+<!-- ══ CHECKOUT ══ -->
+<div id="pg-checkout" class="pg" style="padding:52px 5%;min-height:70vh">
+  <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;margin-bottom:24px">Checkout</div>
+  <div class="costeps">
+    <div class="costep act" id="cs1">1. Delivery</div>
+    <div class="costep" id="cs2">2. Review</div>
+    <div class="costep" id="cs3">3. Payment</div>
+  </div>
+  <div id="coContent"></div>
+</div>
+
+<!-- ══ CONFIRM ══ -->
+<div id="pg-confirm" class="pg" style="padding:52px 5%;min-height:70vh">
+  <div class="confwrap">
+    <div class="conficon">✅</div>
+    <h2>Order Placed!</h2>
+    <p>Thank you for shopping with ChitraKaar Crafts.</p>
+    <p>Confirmation sent to your email.</p>
+    <div class="oid" id="oidDisplay">Order #CK-000000</div>
+    <div class="trackrow">
+      <div class="tst"><div class="tdot done">📦</div><span>Placed</span></div>
+      <div class="tst"><div class="tdot">⚙️</div><span>Processing</span></div>
+      <div class="tst"><div class="tdot">🚚</div><span>Shipped</span></div>
+      <div class="tst"><div class="tdot">🏠</div><span>Delivered</span></div>
+    </div>
+    <div style="margin-top:8px">
+      <button class="bgold" onclick="goPage('dashboard')">View My Orders</button>
+      <p style="font-size:.78rem;color:var(--green);margin-top:12px;font-weight:600">📱 WhatsApp opened with order details!</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ DASHBOARD ══ -->
+<div id="pg-dashboard" class="pg" style="padding:52px 5%;min-height:70vh">
+  <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;margin-bottom:4px">My Account</div>
+  <div id="dashContent"></div>
+</div>
+
+<!-- AUTH MODAL -->
+<div class="moverlay" id="authModal" onclick="closeModalOut(event)">
+  <div class="modal">
+    <button class="mclose" onclick="closeAuth()">✕</button>
+    <h2>Welcome to <span class="gold">ChitraKaar Crafts</span></h2>
+    <p>Login or create an account to continue</p>
+    <div class="tabrow">
+      <button class="tabbtn act" id="tLogin"    onclick="switchTab('login')">Login</button>
+      <button class="tabbtn"     id="tReg"      onclick="switchTab('register')">Register</button>
+    </div>
+    <div id="fLogin">
+      <div class="fg"><label>Email</label><input type="email" id="lEmail" placeholder="your@email.com"></div>
+      <div class="fg"><label>Password</label><input type="password" id="lPass" placeholder="••••••••"></div>
+      <div class="ferr" id="lErr"></div>
+      <button class="fsub" onclick="doLogin()">Login to ChitraKaar Crafts</button>
+      <p style="text-align:center;margin-top:14px;font-size:.84rem;color:var(--gray)">No account? <a onclick="switchTab('register')" style="color:var(--gold);cursor:pointer;font-weight:600">Register →</a></p>
+    </div>
+    <div id="fReg" style="display:none">
+      <div class="fg"><label>Full Name</label><input id="rName" placeholder="Your full name"></div>
+      <div class="fg"><label>Email</label><input type="email" id="rEmail" placeholder="your@email.com"></div>
+      <div class="fg"><label>Password</label><input type="password" id="rPass" placeholder="Min 6 characters"></div>
+      <div class="ferr" id="rErr"></div>
+      <button class="fsub" onclick="doRegister()">Create Account</button>
+      <p style="text-align:center;margin-top:14px;font-size:.84rem;color:var(--gray)">Already registered? <a onclick="switchTab('login')" style="color:var(--gold);cursor:pointer;font-weight:600">Login →</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- RETURN MODAL -->
+
+
+<!-- PRODUCT DETAIL PAGE -->
+<div id="pg-product" class="pg" style="padding:0;min-height:100vh">
+  <div id="productDetailContent"></div>
+</div>
+
+<!-- BULK BAR -->
+<div class="bulkbar" id="bulkBar">
+  <span id="bulkCount">0 items selected</span>
+  <button class="bbtn" onclick="bulkAdd()">Add All to Cart →</button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLB(event)">
+  <div class="lb-close" onclick="closeLightbox()">✕</div>
+  <div class="lb-prev" onclick="lbNav(-1)">‹</div>
+  <img id="lbImg" src="" alt="Product">
+  <div class="lb-next" onclick="lbNav(1)">›</div>
+</div>
+
+<footer>
+  <div class="ftgrid">
+    <div class="ftbrand">
+      <span class="logo" onclick="goPage('home')" style="display:block;margin-bottom:10px;color:#fff">Chitrakaar<em>Crafts</em></span>
+      <p>India's trusted curated marketplace. Quality products from local sellers, delivered fast to your door.</p>
+    </div>
+    <div class="ftcol">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a onclick="goPage('home')">Home</a></li>
+        <li><a onclick="goPage('about')">About Us</a></li>
+        <li><a onclick="requireAuth(()=>goPage('cart'))">My Cart</a></li>
+        <li><a onclick="requireAuth(()=>goPage('dashboard'))">My Orders</a></li>
+      </ul>
+    </div>
+    <div class="ftcol">
+      <h4>Support</h4>
+      <ul>
+        <li><a onclick="goPage('contact')">Contact Us</a></li>
+        <li><a onclick="showToast('FAQ coming soon!')">FAQ</a></li>
+        
+        <li><a onclick="showToast('Policy coming soon!')">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="ftcol">
+      <h4>Contact</h4>
+      <ul>
+        <li><a><span class="__cf_email__" data-cfemail="e497949196d0d5d5d0a48389858d88ca878b89">[email&#160;protected]</span></a></li>
+        
+        <li><a onclick="showToast('Seller portal coming soon!')">Seller Portal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ftbot">
+    <span>© 2026 ChitraKaar Crafts. All rights reserved.</span>
+    <span>Made with ❤️ in India</span>
+  </div>
+</footer>
+
+<!-- ══ ADMIN FAB ══ -->
+<button class="admin-fab" onclick="openAdminGate()" title="Admin">⚙</button>
+
+<!-- ══ ADMIN PASSWORD GATE ══ -->
+<div class="admin-overlay" id="adminGate">
+  <div class="admin-box" style="max-width:340px;text-align:center">
+    <div style="font-size:2.5rem;margin-bottom:10px">🔐</div>
+    <h2 style="justify-content:center;margin-bottom:6px">Admin Access</h2>
+    <p style="color:var(--gray);font-size:.85rem;margin-bottom:18px">Enter admin password to continue</p>
+    <div class="admin-fg">
+      <input type="password" id="adminPwInput" placeholder="Enter password"
+             style="text-align:center;font-size:1rem;letter-spacing:3px"
+             onkeydown="if(event.key==='Enter')checkAdminPw()">
+    </div>
+    <button class="bgold" style="width:100%;margin-bottom:10px" onclick="checkAdminPw()">Unlock Admin Panel</button>
+    <button onclick="closeAdminGate()" style="width:100%;padding:10px;border:1.5px solid var(--gl);border-radius:8px;cursor:pointer;font-weight:600;background:none">Cancel</button>
+  </div>
+</div>
+
+<!-- ══ ADMIN PANEL ══ -->
+<div class="admin-overlay" id="adminPanel">
+  <div class="admin-box">
+    <h2>⚙️ Admin Panel
+      <button onclick="closeAdminPanel()" style="margin-left:auto;background:none;border:none;font-size:1.3rem;cursor:pointer;color:#999">✕</button>
+    </h2>
+    <div class="admin-tabs">
+      <button class="admin-tab on" id="atab-add" onclick="adminTab('add')">➕ Add Product</button>
+      <button class="admin-tab" id="atab-manage" onclick="adminTab('manage')">📦 Manage</button>
+    </div>
+
+    <!-- ADD / EDIT TAB -->
+    <div id="adminAdd">
+      <input type="hidden" id="ap-editid" value="">
+      <div class="admin-fg">
+        <label>Product Name *</label>
+        <input id="ap-name" placeholder="e.g. Custom Bouquet">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="admin-fg">
+          <label>Price (₹) *</label>
+          <input id="ap-price" type="number" placeholder="499">
+        </div>
+        <div class="admin-fg">
+          <label>Category</label>
+          <input id="ap-cat" list="ap-cat-list" placeholder="Select or type...">
+          <datalist id="ap-cat-list">
+            <option value="ChitraKaar Crafts">
+            <option value="Bouquets">
+            <option value="Hampers">
+            <option value="Frames">
+            <option value="Cards">
+            <option value="Explosion Box">
+            <option value="Candles">
+          </datalist>
+        </div>
+      </div>
+      <div class="admin-fg">
+        <label>Description *</label>
+        <textarea id="ap-desc" placeholder="Describe this product..."></textarea>
+      </div>
+      <div class="admin-fg">
+        <label>Key Features</label>
+        <div class="admin-feat-list" id="apFeatList">
+          <div class="admin-feat-item"><input placeholder="Feature 1"><button onclick="removeFeat(this)">✕</button></div>
+          <div class="admin-feat-item"><input placeholder="Feature 2"><button onclick="removeFeat(this)">✕</button></div>
+        </div>
+        <button onclick="addFeat()" style="font-size:.8rem;padding:5px 12px;border:1.5px dashed var(--gl);border-radius:6px;background:none;cursor:pointer;width:100%;margin-top:4px">+ Add Feature</button>
+      </div>
+      <div class="admin-fg">
+        <label>Product Images (up to 4) — click to select</label>
+        <label for="ap-imgs" style="display:flex;align-items:center;gap:10px;padding:12px;border:2px dashed var(--gl);border-radius:8px;cursor:pointer;background:#fafafa">
+          <span style="font-size:1.5rem">📁</span>
+          <span id="ap-imgs-label" style="font-size:.85rem;color:var(--gray)">Tap here to choose images</span>
+        </label>
+        <input type="file" id="ap-imgs" accept="image/*" multiple style="display:none">
+        <div class="admin-imgs-row" id="apImgPreviews" style="margin-top:8px"></div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <button class="bgold" style="flex:1" id="apSubmitBtn" onclick="adminSaveProduct()">✅ Add Product</button>
+        <button id="apCancelEdit" style="display:none;flex:1;padding:12px;border:1.5px solid var(--gl);border-radius:50px;cursor:pointer;font-weight:700;background:none" onclick="adminCancelEdit()">✕ Cancel</button>
+      </div>
+    </div>
+
+    <!-- MANAGE TAB -->
+    <div id="adminManage" style="display:none">
+      <div class="admin-prod-list" id="adminProdList"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
